@@ -76,9 +76,9 @@ function flipCard(card) {
         });
 
         if (initialColor === 'rgb(255, 99, 71)') {
-          rs -= 2;
+          rs -= 3;
         } else {
-          bs -= 2;
+          bs -= 3;
         }
 
         document.getElementById("m1").textContent = "RedScore→" + rs;
@@ -188,7 +188,7 @@ function startTimer() {
 
       switchTurn();
     }
-  }, 1500);
+  }, 1000);
 }
 
 function updateTimerDisplay() {

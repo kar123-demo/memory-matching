@@ -101,27 +101,6 @@ function showPopup() {
   clearInterval(timerInterval);
   let message = rs > bs ? `Red wins with ${rs} points!` : bs > rs ? `Blue wins with ${bs} points!` : `It's a tie with ${rs} points each!`;
 
-  // Save high scores for multiplayer game
-  const redPlayerName = prompt("Enter Red player's name:", "Red Player");
-  const bluePlayerName = prompt("Enter Blue player's name:", "Blue Player");
-  
-  if (redPlayerName && bluePlayerName) {
-    const key = 'multi_medium_scores';
-    let scores = JSON.parse(localStorage.getItem(key) || '[]');
-    
-    // Save both players' scores
-    scores.push({
-      redPlayer: { name: redPlayerName, score: rs },
-      bluePlayer: { name: bluePlayerName, score: bs },
-      date: new Date().toLocaleDateString()
-    });
-    
-    // Sort by highest score between the two players
-    scores.sort((a, b) => Math.max(b.redPlayer.score, b.bluePlayer.score) - Math.max(a.redPlayer.score, a.bluePlayer.score));
-    scores = scores.slice(0, 5); // Keep only top 5 scores
-    localStorage.setItem(key, JSON.stringify(scores));
-  }
-
   const popup = document.createElement('div');
   popup.classList.add('popup');
   popup.innerHTML = ` 
