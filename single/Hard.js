@@ -144,7 +144,7 @@ function showPopup(message) {
   if (message.includes("You Won")) {
     const playerName = prompt("Enter your name for the high score:", "Player");
     if (playerName) {
-      // Save score to localStorage
+     
       const key = 'single_hard_scores';
       let scores = JSON.parse(localStorage.getItem(key) || '[]');
       scores.push({ score: sc, playerName, date: new Date().toLocaleDateString() });

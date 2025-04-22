@@ -143,12 +143,12 @@ function showPopup(message) {
   if (message.includes("You Won")) {
     const playerName = prompt("Enter your name for the high score:", "Player");
     if (playerName) {
-    
+     
       const key = 'single_medium_scores';
       let scores = JSON.parse(localStorage.getItem(key) || '[]');
       scores.push({ score: sc, playerName, date: new Date().toLocaleDateString() });
       scores.sort((a, b) => b.score - a.score);
-      scores = scores.slice(0, 5); s
+      scores = scores.slice(0, 5); // Keep only top 5 scores
       localStorage.setItem(key, JSON.stringify(scores));
     }
   }
