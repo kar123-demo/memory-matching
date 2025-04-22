@@ -230,25 +230,23 @@ window.onload=()=>{
 
 // High Scores Management
 function saveHighScore(mode, difficulty, score, playerName = 'Player') {
-    const key = `${mode}_${difficulty}_scores`;
-    let scores = JSON.parse(localStorage.getItem(key) || '[]');
-    scores.push({ score, playerName, date: new Date().toLocaleDateString() });
-    scores.sort((a, b) => b.score - a.score);
-    scores = scores.slice(0, 5); // Keep only top 5 scores
-    localStorage.setItem(key, JSON.stringify(scores));
-    updateHighScoresDisplay();
+    // Only save scores for single player mode
+    if (mode === 'single') {
+        const key = `${mode}_${difficulty}_scores`;
+        let scores = JSON.parse(localStorage.getItem(key) || '[]');
+        scores.push({ score, playerName, date: new Date().toLocaleDateString() });
+        scores.sort((a, b) => b.score - a.score);
+        scores = scores.slice(0, 5); // Keep only top 5 scores
+        localStorage.setItem(key, JSON.stringify(scores));
+        updateHighScoresDisplay();
+    }
 }
 
 function updateHighScoresDisplay() {
-    // Update single player scores
+    // Update only single player scores
     updateScoreCategory('single', 'hard', 'hard-scores');
     updateScoreCategory('single', 'medium', 'medium-scores');
     updateScoreCategory('single', 'easy', 'easy-scores');
-
-    // Update multi player scores
-    updateScoreCategory('multi', 'hard', 'hard1-scores');
-    updateScoreCategory('multi', 'medium', 'medium1-scores');
-    updateScoreCategory('multi', 'easy', 'easy1-scores');
 }
 
 function updateScoreCategory(mode, difficulty, elementId) {
