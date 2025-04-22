@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video id="background-video" autoplay  muted poster="" >
+        <source src="./pictures/Beige and Green Playful Illustrative Animated Memory Game Presentation.mp4" type="video/mp4">
+      </video> 
+    <button id="b2" onclick="if(c==0) mode()">Mode</button>
+    
+      <button id="b1" onclick="if(c==0)demo()" >play</button>
+      
+      <button id="b3" onclick="if(c==0) showImage()">Instructions</button>
+      <button id="b4" onclick="if(c==0) showHighScores()">High Scores</button>
+      
+      <div class="high-scores">
+        <div class="single-player-scores">
+          <h2>Single Player High Scores</h2>
+          <div class="score-category">
+            <h3>Hard Mode</h3>
+            <div id="hard-scores"></div>
+          </div>
+          <div class="score-category">
+            <h3>Medium Mode</h3>
+            <div id="medium-scores"></div>
+          </div>
+          <div class="score-category">
+            <h3>Easy Mode</h3>
+            <div id="easy-scores"></div>
+          </div>
+        </div>
+
+        <div class="multi-player-scores">
+          <h2>Multi Player High Scores</h2>
+          <div class="score-category">
+            <h3>Hard Mode</h3>
+            <div id="hard1-scores"></div>
+          </div>
+          <div class="score-category">
+            <h3>Medium Mode</h3>
+            <div id="medium1-scores"></div>
+          </div>
+          <div class="score-category">
+            <h3>Easy Mode</h3>
+            <div id="easy1-scores"></div>
+          </div>
+        </div>
+      </div>
+
+      <script src="first.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Memory Matching Game</title>
+    <link rel="stylesheet" href="Medium1.css">
+    <style>
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 30px;
+            background-color: rgb(184, 201, 218);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 5px 5px 5px black;
+            z-index: 2;
+        }
+        .back-button:hover {
+            background-color: rgb(164, 181, 198);
+        }
+    </style>
+</head>
+
+<body>
+ 
+     
+  <div class="semi-circle ">
+    <p class="left-text">YOUR TURN</p>
+  </div>
+  <div class="semi-circle1 ">
+    <p class="right-text">YOUR TURN</p>
+  </div>
+
+  <div id="timer">10s</div>
+<form id="scor">
+  <h1 id="m1">RedScore→0</h1>
+  </form>
+  <form id="move">
+    <h1 id="s1">BlueScore→0</h1>
+    </form>
+    <button class="back-button" onclick="window.location.href='../index.html'">← Back</button>
+    <script src="Medium1.js"></script>
+    <div class="main1">
+   
+    <div class="main">
+    <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph1.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph2.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph3.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph4.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph5.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/download1.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph1.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph2.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph3.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph4.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/ph5.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/c1.png" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/c1.png" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/c2.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/c2.jpg" >
+          </div>
+        </div>
+      </div>
+      <div class="card2" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+           <img src="../pictures/de.png" alt="react" >
+          </div>
+          <div class="card-back" aria-multiline="React">
+          <img src="../pictures/download1.jpg" >
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+     
+      
+</body>
+ 
+</html>

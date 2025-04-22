@@ -1,0 +1,244 @@
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#b1, #b3,#b2, #b4 {
+    transition: background-color 1s ease;
+    text-align: center;
+    width: 30vh;
+    height: 15vh;
+    position: absolute;
+    border-radius: 30%;
+    font-size: 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    opacity: 0;
+    animation: moveShadow 2s infinite;
+}
+
+
+@keyframes fallDown1 {
+    0% {
+        top: -20vh;
+        opacity: 0;
+    }
+    50% {
+        top: 45vh;
+        opacity: 1;
+    }
+    100% {
+        top: 40vh;
+   
+        opacity: 1;
+    }
+}
+
+@keyframes fallDown2 {
+    0% {
+        top: -20vh;
+        opacity: 0;
+    }
+    50% {
+        top: 63vh;
+        opacity: 1;
+    }
+    100% {
+        top: 59vh;
+        opacity: 1;
+    }
+}
+
+@keyframes fallDown3 {
+    0% {
+        top: -20vh;
+        opacity: 0;
+    }
+    50% {
+        top: 85vh;
+        opacity: 1;
+    }
+    100% {
+        top: 80vh;
+        opacity: 1;
+    }
+}
+
+@keyframes moveShadow {
+    0% {
+        box-shadow: 0px 0px 10px rgb(30, 206, 59);
+    }
+    50% {
+        box-shadow: 0px 0 rgb(49, 176, 10);
+    }
+    100% {
+        box-shadow: 0px 0px 10px rgb(13, 154, 29);
+    }
+}
+
+#b3 {
+    background-color: #1818c363;
+    animation: fallDown3 1.5s ease-out forwards;
+    animation-delay: 2s;
+    left: 82vw;
+}
+
+
+
+#b1 {
+    background-color: #dc6b0f;
+    animation: fallDown1 1.5s ease-out forwards;
+    animation-delay: 4s;
+    left: 82vw;
+}
+
+#b1:hover {
+    background-color: #21bc50;
+    box-shadow: 0 0 30px black, 0 0 40px black,0 0 50px black;
+}
+#b2 {
+    background-color: #0fdc2e;
+    animation: fallDown2 1.5s ease-out forwards;
+    animation-delay: 3s;
+    left: 82vw;
+}
+
+#b2:hover {
+    background-color: #9591ee;
+    box-shadow: 0 0 30px black, 0 0 40px black,0 0 50px black;
+}
+
+#b3:hover {
+    background-color: #0be2b0;
+    box-shadow: 0 0 30px black, 0 0 40px black,0 0 50px black;
+}
+
+#b4 {
+    background-color: #9c27b0;
+    animation: fallDown4 1.5s ease-out forwards;
+    animation-delay: 5s;
+    left: 82vw;
+}
+
+#b4:hover {
+    background-color: #7b1fa2;
+    box-shadow: 0 0 30px black, 0 0 40px black,0 0 50px black;
+}
+
+@keyframes fallDown4 {
+    0% {
+        top: -50vh;
+        opacity: 0;
+    }
+    50% {
+        top: -25vh;
+        opacity: 1;
+    }
+    100% {
+        top: 0vh;
+        opacity: 1;
+    }
+}
+
+.image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.image-container img {
+   
+
+   height: 500px;
+   width: 800px;
+    max-width: 100%;
+   
+}
+
+.high-scores {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+    max-width: 80%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.high-scores h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.score-category {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.score-category h3 {
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.single-player-scores, .multi-player-scores {
+    margin-bottom: 30px;
+}
+
+#hard-scores, #medium-scores, #easy-scores,
+#hard1-scores, #medium1-scores, #easy1-scores {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+  
+  
+ 
+  
+ 
+  
+ 
+  
